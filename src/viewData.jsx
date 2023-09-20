@@ -22,12 +22,27 @@ export const Lista=()=>{
         })
     },[]);
 
+ /* usersModel.findAll({attributes:['username','email']})
+ .then(users=>{
+     const resultados = JSON.stringify(users)
+     document.write(resultados)
+ }) */
+
     return (
         <>
             <h1>Lista de usuarios</h1>
             <ul>
                 {lista.map((usuario)=>{
-                    <li>{usuario.username}</li>
+                    <li>{usuario.id}</li>
+                })}
+            </ul>
+
+
+
+            <h1>Lista de posts</h1>
+            <ul>
+                {lista.map((post)=>{
+                    <li>{post.id}</li>
                 })}
             </ul>
         </>
